@@ -1,0 +1,251 @@
+/* Variables */
+:root {
+    --couleur-primaire: #F7C948; /* Jaune miel */
+    --couleur-secondaire: #8AB17D; /* Vert feuille */
+    --couleur-tertiaire: #F58A07; /* Orange pollen */
+    --couleur-fond: #FFFBE6; /* Blanc crème */
+    --couleur-texte: #333333; /* Noir charbon */
+    --couleur-hover: #F7C948; /* Jaune miel hover */
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--couleur-secondaire);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--couleur-hover);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--couleur-texte);
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--couleur-primaire);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-image img {
+    height: 50px;
+}
+
+.logo-title h1 {
+    font-size: 2rem;
+}
+
+/* Navigation */
+.nav-list nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-list nav ul li a {
+    color: var(--couleur-texte);
+    padding: 10px 20px;
+}
+
+.nav-list nav ul li a:hover {
+    color: var(--couleur-secondaire);
+}
+
+/* Menu utilisateur (connexion/déconnexion) */
+.user-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.login-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.login-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Liste déroulante */
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--couleur-fond);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    display: none;
+    min-width: 150px;
+    text-align: center;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: var(--couleur-texte);
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background: var(--couleur-primaire);
+    color: white;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+/* Sections */
+section {
+    background-color: var(--couleur-fond);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1rem;
+    color: var(--couleur-texte);
+}
+
+section.hero h2 {
+    font-size: 2.5rem;
+}
+
+section.hero p {
+    font-size: 1.25rem;
+}
+
+/* Formulaires */
+.contact-form, .connexion-form, .inscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--couleur-tertiaire);
+}
+
+/* Formulaire d'inscription */
+.inscription-form .prenometnom,
+.inscription-form .emailetpassword,
+.inscription-form .username {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.inscription-form .prenometnom div,
+.inscription-form .emailetpassword div,
+.inscription-form .username div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.inscription-form input,
+.inscription-form select,
+.inscription-form textarea {
+    max-width: 100%;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--couleur-tertiaire);
+    color: var(--couleur-fond);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--couleur-secondaire);
+}
+
+/* Footer */
+footer {
+    background-color: var(--couleur-texte);
+    color: var(--couleur-fond);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--couleur-secondaire);
+}
+
+footer a:hover {
+    color: var(--couleur-hover);
+}
